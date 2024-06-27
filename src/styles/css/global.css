@@ -1,0 +1,18 @@
+@import './reset.css';
+@import './transition.css';
+@import './themeVars.css';
+@import './fonts.css';
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html.grayscale {
+  filter: grayscale(100%);
+}

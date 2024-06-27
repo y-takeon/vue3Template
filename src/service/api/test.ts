@@ -2,7 +2,7 @@
  * @Author: ycb
  * @Date: 2024-06-14 17:19:52
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-06-15 11:36:21
+ * @LastEditTime: 2024-06-25 16:11:54
  * @Description: 
  */
 import { request } from '../request';
@@ -23,5 +23,12 @@ export function GetElectricWaveVal(params:any, data:any) {
     method: 'post',
     params,
     data
+  });
+}
+
+export function getTest1() {
+  return request({
+    url: '/users',
+    method: 'get'
   });
 }

@@ -2,10 +2,10 @@
  * @Author: ycb
  * @Date: 2024-05-21 22:48:17
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-05-21 23:01:32
+ * @LastEditTime: 2024-06-25 17:59:46
  * @Description: 
  */
-const routes = [
+const loginRoutes = [
   {
     path: '/login',
     name: 'Login',
@@ -16,4 +16,4 @@ const routes = [
   }
 ]
 
-export default routes;
+export default loginRoutes;

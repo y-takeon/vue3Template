@@ -2,7 +2,7 @@
  * @Author: ycb
  * @Date: 2024-06-03 14:23:03
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-06-17 17:53:59
+ * @LastEditTime: 2024-06-25 16:13:39
  * @Description: 
  */
 import axios from 'axios';
@@ -46,5 +46,5 @@ function createCommonRequest<ResponseData = any>(axiosConfig?: CreateAxiosDefaul
 }
 
 export const request = createCommonRequest<App.Service.Response>({
-  baseURL: 'http://122.112.160.41:8080/idev/'
+  // baseURL: 'http://122.112.160.41:8080/idev/'
 });

@@ -2,7 +2,7 @@
  * @Author: ycb
  * @Date: 2024-06-17 16:59:35
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-06-17 17:02:57
+ * @LastEditTime: 2024-06-25 12:38:17
  * @Description: 
  */
 const toString = Object.prototype.toString;
@@ -47,4 +47,23 @@ const toString = Object.prototype.toString;
  */
  export function isArray(val:any) {
 	return val && Array.isArray(val);
+}
+
+/**
+ * @description:  空数组 | 空字符串 | 空对象 | 空Map | 空Set
+ */
+export function isAllEmpty(val: any) {
+  if (isArray(val) || isString(val)) {
+    return val.length === 0
+  }
+
+  if (val instanceof Map || val instanceof Set) {
+    return val.size === 0
+  }
+
+  if (isObject(val)) {
+    return Object.keys(val).length === 0
+  }
+
+  return false
 }

@@ -2,7 +2,7 @@
  * @Author: ycb
  * @Date: 2024-05-21 23:01:41
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-06-18 14:39:05
+ * @LastEditTime: 2024-06-25 17:56:14
  * @Description: 
  */
 import { App } from 'vue'
@@ -12,7 +12,7 @@ import { createRouterGuard } from './guard'
 const modules: Record<string, any> = import.meta.glob('./modules/**/*.ts', {
   eager: true
 });
-
+console.log(modules)
 const routeModules: RouteRecordRaw[] = []
 
 Object.keys(modules).forEach(key => {

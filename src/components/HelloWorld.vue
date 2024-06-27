@@ -2,23 +2,26 @@
  * @Author: ycb
  * @Date: 2024-04-22 17:19:43
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-06-18 15:04:18
+ * @LastEditTime: 2024-06-25 16:14:09
  * @Description: 
 -->
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAppStore } from '@/store/modules/app'
-import { getTest, GetElectricWaveVal } from '@/service/api';
+import { getTest1, GetElectricWaveVal } from '@/service/api';
 
 const appStore = useAppStore()
 let timestamp = ref()
 const router = useRouter()
 
+onMounted(() => {
+  console.log('appStore', import.meta.env);
+})
+
 function reset() {
   console.log('reset', appStore)
-  const secretKey = '';
-  getTest(secretKey).then(res => {
+  getTest1().then(res => {
     console.log('res', res)
   })
   appStore.$reset()

@@ -2,29 +2,21 @@
  * @Author: ycb
  * @Date: 2024-04-22 17:19:43
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-05-22 10:33:09
+ * @LastEditTime: 2024-06-26 18:05:38
  * @Description: 
 -->
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+// import { darkTheme } from 'naive-ui'
+// const naiveDarkTheme = 
+
 </script>
 
 <template>
-  <HelloWorld />
-  <router-view></router-view>
+  <NConfigProvider class="h-full">
+    <RouterView></RouterView>
+  </NConfigProvider>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
